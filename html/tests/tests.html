@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Site</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="testscript.js"></script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <div class="content">
+      <h1>Tests:</h1>
+      <button id="testReadDB" class="btn btn-primary">Read Data</button>
+      <button id="testWriteDB" class="btn btn-primary">Write Data</button>
+    </div>
+    <div class="content">
+    <label for="playlistType">Choose a Playlist Type:</label>
+    <select name="playlistType" id="playlistType">
+      <option value="meme">Meme</option>
+      <option value="music">Music</option>
+    </select>
+    <input placeholder="Enter a Youtube Playlist Id" id="playlistId"/>
+    <button id="addNewPlayListId" class="btn btn-primary">Add PlaylistId</button>
+  </div>
+  </div>
+</div>
+
+</body>
+
+</html>
