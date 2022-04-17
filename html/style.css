@@ -1,3 +1,8 @@
 body {
 	background: #454545;
 }
+
+.jumbotron .content {
+	text-align: center;
+	margin: inherit;
+}
