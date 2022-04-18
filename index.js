@@ -46,6 +46,13 @@ app.post('/POSTS/music', function (req, res) {
 });
 // ================================================== //
 
+// Post redirect for Misc Videos
+app.post('/POSTS/misc', function (req, res) {
+	controller.misc();
+	res.sendStatus(200);
+});
+// ================================================== //
+
 // Test redirects
 app.post('/tests/POSTS/test', async function (req, res) {
 	let backres;

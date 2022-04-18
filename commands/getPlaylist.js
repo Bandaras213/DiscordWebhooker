@@ -38,14 +38,14 @@ async function fetch(playListId) {
  */
 async function getOnlyNew(db, playListId, data) {
     for (let i = data.items.length - 1; i >= 0; i--) {
-        for (let j = 0; j < db.playListId.items.length; j++) {
-            if (data.items[i].snippet.id == db.playListId.items[j].snippet.id) {
+        for (let j = 0; j < db[playListId].items.length; j++) {
+            if (data.items[i].snippet.id == db[playListId].items[j].snippet.id) {
                 break;
             }
         }
-        db.playListId.items.unshift(data.items[i]);
+        db[playListId].items.unshift(data.items[i]);
     }
-    db.playListId.count = data.pageInfo.totalResults;
+    db[playListId].count = data.pageInfo.totalResults;
 
     return db;
 }

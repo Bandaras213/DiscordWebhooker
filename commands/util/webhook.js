@@ -1,9 +1,5 @@
-const {
-	Webhook,
-	MessageBuilder
-} = require('discord-webhook-node');
+const { Webhook, MessageBuilder } = require('discord-webhook-node');
 const hook = new Webhook(process.env['weebhookurl']);
-//const hook = new Webhook(process.env['testhoocker']);
 
 /** 
  * Discord Hook sender.

@@ -5,6 +5,9 @@ window.onload = function () {
    document.getElementById("musicbtn").addEventListener("click", function () {
       musicSubmit()
    });
+   document.getElementById("miscbtn").addEventListener("click", function () {
+      miscSubmit()
+   });
 }
 
 function memeSubmit() {
@@ -21,6 +24,18 @@ function memeSubmit() {
 
 function musicSubmit() {
    var url = "POSTS/music";
+   var request = new XMLHttpRequest();
+   request.open('POST', url, true);
+   request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+   request.onerror = function () {
+      // request failed
+   };
+   request.send();
+}
+
+function miscSubmit() {
+   var url = "POSTS/misc";
    var request = new XMLHttpRequest();
    request.open('POST', url, true);
    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
